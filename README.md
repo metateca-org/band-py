@@ -1,3 +1,92 @@
+
+
+Importando pyband:
+arduino
+Copy code
+import pyband
+Usando pyband para gerar sequências de banda aleatórias:
+perl
+Copy code
+seq = pyband.gen_seq(length=10)
+print(seq)
+Usando pyband para gerar uma sequência de banda com base em uma sequência de entrada:
+makefile
+Copy code
+input_seq = "ATCG"
+band_seq = pyband.band(input_seq)
+print(band_seq)
+Importando stockpyl:
+arduino
+Copy code
+import stockpyl
+Usando stockpyl para obter o preço de fechamento de uma ação em um determinado dia:
+bash
+Copy code
+ticker = "AAPL"
+date = "2022-01-01"
+closing_price = stockpyl.get_closing_price(ticker, date)
+print(closing_price)
+Usando stockpyl para obter o preço de fechamento de uma ação em um determinado intervalo de datas:
+makefile
+Copy code
+ticker = "AAPL"
+start_date = "2022-01-01"
+end_date = "2022-01-31"
+closing_prices = stockpyl.get_closing_prices(ticker, start_date, end_date)
+print(closing_prices)
+Importando mind-discord:
+arduino
+Copy code
+import mind_discord
+Autenticando com a API do Discord:
+makefile
+Copy code
+client = mind_discord.DiscordClient(token="YOUR_DISCORD_TOKEN")
+Obtendo informações sobre um servidor do Discord:
+makefile
+Copy code
+server_id = "1234567890"
+server_info = client.get_server_info(server_id)
+print(server_info)
+Obtendo informações sobre um canal do Discord:
+makefile
+Copy code
+channel_id = "1234567890"
+channel_info = client.get_channel_info(channel_id)
+print(channel_info)
+Enviando uma mensagem para um canal do Discord:
+makefile
+Copy code
+channel_id = "1234567890"
+message = "Hello, world!"
+client.send_message(channel_id, message)
+Obtendo a lista de membros de um servidor do Discord:
+makefile
+Copy code
+server_id = "1234567890"
+member_list = client.get_member_list(server_id)
+print(member_list)
+Obtendo a lista de canais de um servidor do Discord:
+makefile
+Copy code
+server_id = "1234567890"
+channel_list = client.get_channel_list(server_id)
+print(channel_list)
+Criando um novo canal em um servidor do Discord:
+makefile
+Copy code
+server_id = "1234567890"
+channel_name = "new-channel"
+client.create_channel(server_id, channel_name)
+network error
+
+
+
+
+
+
+
+
 # Introduction
 
 `pyband` and `pydos` are two python scripts that analyse the VASP calculation
